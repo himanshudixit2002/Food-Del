@@ -80,24 +80,7 @@
     margin-top: 20px;
 }
 
-/* Admin Logo Styles */
-.footer-admin-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px; /* Add space between content and admin logo */
-}
 
-.footer-admin-logo img {
-    width: 40px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.footer-admin-logo img:hover {
-    transform: scale(1.1);
-}
 
 /* Responsive Styles */
 @media (max-width: 750px) {
