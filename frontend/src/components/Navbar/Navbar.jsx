@@ -20,27 +20,43 @@ const Navbar = ({ setShowLogin }) => {
     <div className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="Website Logo" /></Link>
       <ul className={`navbar-menu ${showMobileMenu ? 'show' : ''}`}>
-        <Link to="/" onClick={() => { setMenu("home"); setShowMobileMenu(false); }} className={`${menu === "home" ? "active" : ""}`} aria-label="Home">Home</Link>
-        <a href='#explore-menu' onClick={() => { setMenu("menu"); setShowMobileMenu(false); }} className={`${menu === "menu" ? "active" : ""}`} aria-label="Menu">Menu</a>
-        <a href='#app-download' onClick={() => { setMenu("mob-app"); setShowMobileMenu(false); }} className={`${menu === "mob-app" ? "active" : ""}`} aria-label="Mobile App">Mobile app</a>
-        <a href='#footer' onClick={() => { setMenu("contact"); setShowMobileMenu(false); }} className={`${menu === "contact" ? "active" : ""}`} aria-label="Contact Us">Contact us</a>
+        <li>
+          <Link to="/" onClick={() => { setMenu("home"); setShowMobileMenu(false); }} className={`${menu === "home" ? "active" : ""}`} aria-label="Home">Home</Link>
+        </li>
+        <li>
+          <a href='#explore-menu' onClick={() => { setMenu("menu"); setShowMobileMenu(false); }} className={`${menu === "menu" ? "active" : ""}`} aria-label="Menu">Menu</a>
+        </li>
+        <li>
+          <a href='#app-download' onClick={() => { setMenu("mob-app"); setShowMobileMenu(false); }} className={`${menu === "mob-app" ? "active" : ""}`} aria-label="Mobile App">Mobile app</a>
+        </li>
+        <li>
+          <a href='#footer' onClick={() => { setMenu("contact"); setShowMobileMenu(false); }} className={`${menu === "contact" ? "active" : ""}`} aria-label="Contact Us">Contact us</a>
+        </li>
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="Search Icon" />
         <Link to='/cart' className='navbar-search-icon' aria-label="Cart">
           <img src={assets.basket_icon} alt="Basket Icon" />
-          <div className={getTotalCartAmount() > 0 ? "dot" : ""}></div>
+          {getTotalCartAmount() > 0 && <div className="dot"></div>}
         </Link>
-        {!token ? <button onClick={() => setShowLogin(true)} aria-label="Sign In">Sign in</button>
-          : <div className='navbar-profile'>
+        {!token ? (
+          <button onClick={() => setShowLogin(true)} aria-label="Sign In">Sign in</button>
+        ) : (
+          <div className='navbar-profile'>
             <img src={assets.profile_icon} alt="Profile Icon" />
             <ul className='navbar-profile-dropdown'>
-              <li onClick={() => navigate('/myorders')} aria-label="My Orders"> <img src={assets.bag_icon} alt="Bag Icon" /> <p>Orders</p></li>
+              <li onClick={() => navigate('/myorders')} aria-label="My Orders">
+                <img src={assets.bag_icon} alt="Bag Icon" />
+                <p>Orders</p>
+              </li>
               <hr />
-              <li onClick={logout} aria-label="Logout"> <img src={assets.logout_icon} alt="Logout Icon" /> <p>Logout</p></li>
+              <li onClick={logout} aria-label="Logout">
+                <img src={assets.logout_icon} alt="Logout Icon" />
+                <p>Logout</p>
+              </li>
             </ul>
           </div>
-        }
+        )}
       </div>
     </div>
   );
