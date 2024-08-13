@@ -1,6 +1,6 @@
 /* General Styles */
 .navbar {
-    padding: 8px 20px; /* Reduced vertical padding to decrease height */
+    padding: 5px 20px; /* Further reduced vertical padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@
     list-style: none;
     gap: 20px; /* Space between menu items */
     color: #333;
-    font-size: 16px; /* Font size */
+    font-size: 17.6px; /* Increased font size by 10% from 16px */
     margin: 0;
     padding: 0;
 }
@@ -62,10 +62,10 @@
 
 .navbar-right button {
     background: #333;
-    font-size: 16px; /* Font size */
+    font-size: 17.6px; /* Increased font size by 10% from 16px */
     color: #fff;
     border: none;
-    padding: 8px 20px; /* Adjusted padding */
+    padding: 6px 16px; /* Adjusted padding to fit new height */
     border-radius: 25px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
@@ -100,6 +100,7 @@
     cursor: pointer;
     padding: 6px 10px;
     transition: background 0.3s ease;
+    font-size: 17.6px; /* Increased font size by 10% */
 }
 
 .navbar-profile-dropdown img {
@@ -123,7 +124,7 @@
 /* Responsive Styles */
 @media (max-width: 1050px) {
     .navbar {
-        padding: 8px 15px;
+        padding: 5px 15px;
     }
 
     .navbar .logo {
@@ -132,7 +133,7 @@
 
     .navbar-menu {
         gap: 15px;
-        font-size: 14px;
+        font-size: 15.4px; /* Increased font size by 10% from 14px */
     }
 
     .navbar-right {
@@ -142,7 +143,7 @@
 
 @media (max-width: 900px) {
     .navbar {
-        padding: 6px 10px;
+        padding: 4px 10px;
     }
 
     .navbar .logo {
@@ -151,7 +152,7 @@
 
     .navbar-menu {
         gap: 10px;
-        font-size: 12px;
+        font-size: 13.2px; /* Increased font size by 10% from 12px */
     }
 
     .navbar-right {
