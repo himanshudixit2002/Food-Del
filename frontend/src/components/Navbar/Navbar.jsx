@@ -6,6 +6,7 @@ import { StoreContext } from '../../Context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
+  const [showMobileMenu, setShowMobileMenu] = useState(false); // State for mobile menu visibility
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
 
@@ -18,11 +19,11 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className='navbar'>
       <Link to='/'><img className='logo' src={assets.logo} alt="Website Logo" /></Link>
-      <ul className="navbar-menu">
-        <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`} aria-label="Home">Home</Link>
-        <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`} aria-label="Menu">Menu</a>
-        <a href='#app-download' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`} aria-label="Mobile App">Mobile app</a>
-        <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`} aria-label="Contact Us">Contact us</a>
+      <ul className={`navbar-menu ${showMobileMenu ? 'show' : ''}`}>
+        <Link to="/" onClick={() => { setMenu("home"); setShowMobileMenu(false); }} className={`${menu === "home" ? "active" : ""}`} aria-label="Home">Home</Link>
+        <a href='#explore-menu' onClick={() => { setMenu("menu"); setShowMobileMenu(false); }} className={`${menu === "menu" ? "active" : ""}`} aria-label="Menu">Menu</a>
+        <a href='#app-download' onClick={() => { setMenu("mob-app"); setShowMobileMenu(false); }} className={`${menu === "mob-app" ? "active" : ""}`} aria-label="Mobile App">Mobile app</a>
+        <a href='#footer' onClick={() => { setMenu("contact"); setShowMobileMenu(false); }} className={`${menu === "contact" ? "active" : ""}`} aria-label="Contact Us">Contact us</a>
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="Search Icon" />

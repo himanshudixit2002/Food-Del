@@ -1,42 +1,48 @@
 /* General Styles */
 .navbar {
-    padding: 20px 0;
+    padding: 20px 40px; /* Increased padding for a more spacious layout */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff; /* Added background for better contrast */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    background: #fff; /* White background for a clean look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+    position: fixed; /* Fixed positioning for a persistent navbar */
+    width: 100%; /* Full width for the navbar */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* High z-index to ensure it's above other content */
 }
 
 .navbar .logo {
-    width: 150px;
-    transition: width 0.3s ease-in-out; /* Smooth transition for logo resizing */
+    width: 150px; /* Adjusted logo size */
+    transition: width 0.3s ease; /* Smooth resizing */
 }
 
 .navbar-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
-    color: #49557E;
-    font-size: 18px;
+    gap: 40px; /* Increased spacing between menu items */
+    color: #333; /* Darker text for better readability */
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-menu a {
-    text-decoration: none; /* Ensure links are not underlined */
-    color: inherit; /* Inherit color from parent */
-    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for active link */
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .navbar-menu .active {
-    padding-bottom: 2px;
-    border-bottom: 2px solid #49557E;
-    color: #49557E; /* Make active link color match the border */
+    border-bottom: 2px solid #333; /* Dark underline for active item */
 }
 
 .navbar-right {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px; /* Adjusted spacing for icons and buttons */
 }
 
 .navbar-search-icon {
@@ -45,28 +51,28 @@
 
 .navbar-search-icon .dot {
     position: absolute;
-    min-width: 10px;
-    min-height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #FF4C24;
-    border-radius: 50%; /* Circular dot */
+    border-radius: 50%;
     top: -8px;
     right: -8px;
 }
 
 .navbar-right button {
-    background: transparent;
+    background: #333; /* Dark background for the button */
     font-size: 16px;
-    color: #49557E;
-    border: 1px solid #FF4C24;
-    padding: 10px 30px;
-    border-radius: 50px;
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded corners */
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-right button:hover {
-    background: #fff4f2;
-    color: #FF4C24; /* Change text color on hover */
+    background: #555; /* Darker button background on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
 .navbar-profile {
@@ -77,15 +83,13 @@
     position: absolute;
     display: none;
     right: 0;
-    z-index: 1;
-    background-color: #fff2ef;
-    padding: 12px 25px;
-    border-radius: 4px;
-    border: 1px solid #FF4C24;
-    outline: 2px solid #fff;
+    z-index: 100;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     list-style: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
 }
 
 .navbar-profile-dropdown li {
@@ -93,7 +97,8 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    transition: color 0.3s ease; /* Smooth color change on hover */
+    padding: 8px 12px;
+    transition: background 0.3s ease;
 }
 
 .navbar-profile-dropdown img {
@@ -101,17 +106,15 @@
 }
 
 .navbar-profile-dropdown li:hover {
-    color: #FF4C24;
+    background: #f5f5f5; /* Subtle background change on hover */
 }
 
 .navbar-profile:hover .navbar-profile-dropdown {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: block; /* Show dropdown on hover */
 }
 
 .navbar-profile hr {
-    background-color: gray;
+    background-color: #ddd;
     height: 1px;
     border: none;
 }
@@ -123,20 +126,12 @@
     }
 
     .navbar-menu {
-        gap: 20px;
-        font-size: 17px;
+        gap: 30px;
+        font-size: 15px;
     }
 
     .navbar-right {
-        gap: 30px;
-    }
-
-    .navbar-right img {
-        width: 22px;
-    }
-
-    .navbar-right button {
-        padding: 8px 25px;
+        gap: 20px;
     }
 }
 
@@ -146,26 +141,21 @@
     }
 
     .navbar-menu {
-        gap: 15px;
-        font-size: 16px;
+        gap: 20px;
+        font-size: 14px;
     }
 
     .navbar-right {
-        gap: 20px;
-    }
-
-    .navbar-right img {
-        width: 20px;
-    }
-
-    .navbar-right button {
-        font-size: 15px;
-        padding: 7px 20px;
+        gap: 15px;
     }
 }
 
 @media (max-width: 750px) {
     .navbar-menu {
         display: none;
+    }
+
+    .navbar-right {
+        gap: 10px;
     }
 }
