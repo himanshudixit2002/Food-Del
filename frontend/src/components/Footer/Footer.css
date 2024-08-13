@@ -1,101 +1,24 @@
-/* General Styles */
-.footer {
-    color: #D9D9D9;
-    background-color: #323232;
+/* Add these styles to your existing CSS */
+
+.footer-content-right {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 40px; /* Increased gap for better spacing */
-    padding: 40px 8vw;
-    position: relative; /* Allow absolute positioning for child elements */
-}
-
-.footer-content {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
-    gap: 40px; /* Reduced gap between columns */
-}
-
-.footer-content-left, .footer-content-center, .footer-content-right {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+    align-items: flex-start; /* Align items to the start */
     gap: 20px;
 }
 
-.footer-content-left h2, .footer-content-center h2, .footer-content-right h2 {
-    color: white;
-    font-size: 24px; /* Increased font size for headers */
-    margin-bottom: 10px;
-}
-
-.footer-content-left p {
-    font-size: 16px; /* Increased font size for paragraph */
-    line-height: 1.6;
-    max-width: 400px; /* Limit width for better readability */
-}
-
-.footer-logo {
-    width: 20%; /* Reduced size to 20% of original size (80% smaller) */
-    margin-bottom: 20px;
-}
-
-.footer-social-icons {
+.footer-admin-logo {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
-.footer-social-icons a img {
-    width: 30px; /* Adjust size of social media icons */
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.footer-social-icons a img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-    filter: brightness(1.2); /* Slightly brighten icons on hover */
-}
-
-.footer li {
+.footer-admin-logo img {
+    width: 40px; /* Adjust the size as needed */
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.footer li:hover {
-    color: #FF4C24; /* Highlight color on hover */
-}
-
-.footer hr {
-    width: 100%;
-    height: 2px;
-    margin: 20px 0;
-    border: none;
-    background-color: #444; /* Slightly lighter border for separation */
-}
-
-.footer-copyright {
-    text-align: center;
-    font-size: 14px; /* Increased font size for copyright text */
-    color: #D9D9D9;
-    margin-top: 20px;
-}
-
-/* Responsive Styles */
-@media (max-width: 750px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .footer-logo {
-        width: 30%; /* Adjust logo size for smaller screens */
-    }
-
-    .footer-content-left p {
-        text-align: center; /* Center text on smaller screens */
-    }
-
-    .footer-copyright {
-        font-size: 12px; /* Adjust font size for smaller screens */
-    }
+.footer-admin-logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
