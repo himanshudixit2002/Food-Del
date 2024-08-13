@@ -38,7 +38,7 @@ const Footer = () => {
             </ul>
             <div className="footer-admin-logo">
                 <a href="https://himanshudixit2002.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">
-                    <img src={assets.admin} alt="Admin" />
+                    <img src={assets.himanshu} alt="Admin" />
                 </a>
             </div>
         </div>
