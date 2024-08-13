@@ -41,7 +41,7 @@ const Navbar = ({ setShowLogin }) => {
           </div>
         }
       </div>
-      <button className="mobile-menu-toggle" aria-label="Toggle Menu">☰</button> {/* Add a mobile menu toggle button */}
+      
     </div>
   );
 };
