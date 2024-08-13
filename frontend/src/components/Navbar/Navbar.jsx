@@ -16,16 +16,9 @@ const Navbar = ({ setShowLogin }) => {
     navigate('/');
   };
 
-  // Function to handle scrolling to the top
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <div className='navbar'>
-      <Link to='/' onClick={scrollToTop}>
-        <img className='logo' src={assets.logo} alt="Website Logo" />
-      </Link>
+      <Link to='/'><img className='logo' src={assets.logo} alt="Website Logo" /></Link>
       <ul className={`navbar-menu ${showMobileMenu ? 'show' : ''}`}>
         <Link to="/" onClick={() => { setMenu("home"); setShowMobileMenu(false); }} className={`${menu === "home" ? "active" : ""}`} aria-label="Home">Home</Link>
         <a href='#explore-menu' onClick={() => { setMenu("menu"); setShowMobileMenu(false); }} className={`${menu === "menu" ? "active" : ""}`} aria-label="Menu">Menu</a>

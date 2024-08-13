@@ -1,6 +1,6 @@
 /* General Styles */
 .navbar {
-    padding: 3px 20px; /* Further reduced vertical padding */
+    padding: 2px 15px; /* Further reduced vertical padding by 40% */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .navbar .logo {
-    width: 120px; /* Adjust logo size if needed */
+    width: 120px; /* Adjusted logo size */
     transition: width 0.3s ease;
 }
 
@@ -33,7 +33,12 @@
     text-decoration: none;
     color: inherit;
     font-weight: 500;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #FF4C24; /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up text on hover */
 }
 
 .navbar-menu .active {
@@ -162,7 +167,7 @@
 
 @media (max-width: 750px) {
     .navbar-menu {
-        display: none; /* Hide the menu on smaller screens */
+        display: none;
     }
 
     .navbar-right {
