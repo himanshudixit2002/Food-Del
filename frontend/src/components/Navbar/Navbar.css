@@ -1,6 +1,6 @@
 /* General Styles */
 .navbar {
-    padding: 5px 20px; /* Further reduced vertical padding */
+    padding: 3px 20px; /* Further reduced vertical padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
