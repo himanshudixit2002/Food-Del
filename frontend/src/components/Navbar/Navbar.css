@@ -1,12 +1,16 @@
+/* General Styles */
 .navbar {
-    padding: 20px 0px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #fff; /* Added background for better contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 .navbar .logo {
     width: 150px;
+    transition: width 0.3s ease-in-out; /* Smooth transition for logo resizing */
 }
 
 .navbar-menu {
@@ -17,9 +21,16 @@
     font-size: 18px;
 }
 
+.navbar-menu a {
+    text-decoration: none; /* Ensure links are not underlined */
+    color: inherit; /* Inherit color from parent */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for active link */
+}
+
 .navbar-menu .active {
     padding-bottom: 2px;
     border-bottom: 2px solid #49557E;
+    color: #49557E; /* Make active link color match the border */
 }
 
 .navbar-right {
@@ -28,16 +39,16 @@
     gap: 40px;
 }
 
-.navbar-search-icon{
-position: relative;
+.navbar-search-icon {
+    position: relative;
 }
 
-.navbar-search-icon .dot{
+.navbar-search-icon .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
     background-color: #FF4C24;
-    border-radius: 5px;
+    border-radius: 50%; /* Circular dot */
     top: -8px;
     right: -8px;
 }
@@ -50,52 +61,63 @@ position: relative;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .navbar-right button:hover {
     background: #fff4f2;
+    color: #FF4C24; /* Change text color on hover */
 }
 
-.navbar-profile{
+.navbar-profile {
     position: relative;
-
 }
-.navbar-profile-dropdown{
+
+.navbar-profile-dropdown {
     position: absolute;
     display: none;
     right: 0;
     z-index: 1;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #FF4C24;
+    outline: 2px solid #fff;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
 }
-.navbar-profile-dropdown li{
+
+.navbar-profile-dropdown li {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color change on hover */
 }
-.navbar-profile-dropdown img{
+
+.navbar-profile-dropdown img {
     width: 20px;
 }
-.navbar-profile-dropdown li:hover{
+
+.navbar-profile-dropdown li:hover {
     color: #FF4C24;
 }
-.navbar-profile:hover .navbar-profile-dropdown{
+
+.navbar-profile:hover .navbar-profile-dropdown {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #fff2ef;
-    padding: 12px 25px;
-    border-radius: 4px;
-    border: 1px solid tomato;
-    outline: 2px solid white;
-    list-style: none;
 }
-.navbar-profile hr{
+
+.navbar-profile hr {
     background-color: gray;
     height: 1px;
     border: none;
 }
-@media (max-width:1050px) {
+
+/* Responsive Styles */
+@media (max-width: 1050px) {
     .navbar .logo {
         width: 140px;
     }
@@ -118,7 +140,7 @@ position: relative;
     }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
     .navbar .logo {
         width: 120px;
     }
@@ -142,7 +164,7 @@ position: relative;
     }
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
     .navbar-menu {
         display: none;
     }
