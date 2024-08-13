@@ -63,6 +63,7 @@ import checked from './checked.png'
 import un_checked from './un_checked.png'
 
 export const assets = {
+    admin,
     logo,
     basket_icon,
     header_img,
