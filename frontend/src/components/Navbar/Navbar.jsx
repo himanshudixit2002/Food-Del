@@ -16,9 +16,15 @@ const Navbar = ({ setShowLogin }) => {
     navigate('/');
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top with smooth behavior
+  };
+
   return (
     <div className='navbar'>
-      <Link to='/'><img className='logo' src={assets.logo} alt="Website Logo" /></Link>
+      <Link to='/' onClick={scrollToTop}>
+        <img className='logo' src={assets.logo} alt="Website Logo" />
+      </Link>
       <ul className={`navbar-menu ${showMobileMenu ? 'show' : ''}`}>
         <li>
           <Link to="/" onClick={() => { setMenu("home"); setShowMobileMenu(false); }} className={`${menu === "home" ? "active" : ""}`} aria-label="Home">Home</Link>
