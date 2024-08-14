@@ -29,18 +29,11 @@
     width: 20px;
 }
 
-.sidebar-option:hover {
-    background-color: #f0f0f0; /* Light grey background on hover */
-    border-color: #333; /* Darker border color on hover */
+.sidebar-option.active {
+    background-color: #fff0ed; /* Light orange background for active state */
+    border-color: tomato; /* Tomato border color for active state */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
     transform: scale(1.02); /* Slightly enlarge the element */
-}
-
-.sidebar-option.active, .sidebar-option:focus {
-    background-color: #fff0ed; /* Light orange background when active */
-    border-color: tomato; /* Tomato border color for active state */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
 
 @media (max-width: 900px) {
