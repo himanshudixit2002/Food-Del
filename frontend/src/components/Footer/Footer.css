@@ -52,10 +52,3 @@
         text-align: center;
     }
 }
-.footer-logo {
-    width: 40%; /* Resize the logo image to 40% of its original size (60% smaller) */
-}
-
-.footer-social-icons img {
-    width: 30px; /* Adjust the size of social media icons as needed */
-}
