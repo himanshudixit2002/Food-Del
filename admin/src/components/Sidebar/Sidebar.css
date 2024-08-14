@@ -36,9 +36,11 @@
     transform: scale(1.02); /* Slightly enlarge the element */
 }
 
-.sidebar-option.active {
-    background-color: #fff0ed;
-    border-color: tomato;
+.sidebar-option.active, .sidebar-option:focus {
+    background-color: #fff0ed; /* Light orange background when active */
+    border-color: tomato; /* Tomato border color for active state */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
 
 @media (max-width: 900px) {
